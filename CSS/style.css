@@ -43,9 +43,9 @@ body {
 
 .header {
     position: fixed;
-    top: 0; /*posiciona o elemento no topo*/
-    left: 0;/*alinha-o à esquerda*/
-    width: 100%; /* faz com que ele ocupe toda a largura    */
+    top: 0; 
+    left: 0;
+    width: 100%; 
     padding: 2rem 9%;
     background: transparent;
     display: flex;
@@ -69,7 +69,7 @@ body {
 }
 
 .navbar a:hover,
-.navbar a.active { /*.navbar a.active -> Deixa o primeiro com a cor fixa*/
+.navbar a.active { 
     color: var(--cor-rosa);
 }
 
