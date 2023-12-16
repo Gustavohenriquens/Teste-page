@@ -38,9 +38,9 @@ body {
 
 .header {
     position: fixed;
-    top: 0; /*posiciona o elemento no topo*/
-    left: 0;/*alinha-o à esquerda*/
-    width: 100%; /* faz com que ele ocupe toda a largura */
+    top: 0; 
+    left: 0;
+    width: 100%; 
     padding: 2rem 9%;
     background: transparent;
     display: flex;
@@ -65,7 +65,7 @@ body {
 }
 
 .navbar a:hover,
-.navbar a.active { /*.navbar a.active -> Deixa o primeiro com a cor fixa*/
+.navbar a.active { 
     color: var(--cor-rosa);
 }
 
@@ -87,7 +87,7 @@ body {
 
 
 .cardapio {
-    margin: 20px auto; /* Alterei o margin para centralizar */
+    margin: 20px auto; 
     max-width: 1200px;
     display: flex;
     justify-content: space-around;
@@ -95,15 +95,15 @@ body {
 }
 
 .cardapio h2 {
-    margin-bottom: 2rem; /* Reduzi a margem inferior */
-    font-size: 2.5rem; /* Reduzi o tamanho da fonte */
+    margin-bottom: 2rem; 
+    font-size: 2.5rem; 
 }
 
 .cardapio-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem; /* Reduzi o espaçamento entre os itens */
+    gap: 1.5rem; 
 }
 
 .cardapio-box {
@@ -112,11 +112,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Mudei a direção para coluna */
-    align-items: center; /* Centralizei os itens */
+    flex-direction: column; 
+    align-items: center; 
     max-width: 300px;
     text-align: center;
-    margin: 10px; /* Reduzi a margem */
+    margin: 10px; 
 }
 
 .cardapio-box .image-container {
@@ -140,7 +140,7 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 1.5rem; /* Reduzi o preenchimento */
+    padding: 0 1.5rem; 
     transform: translateY(100%);
     transition: 0.5s ease;
 }
@@ -197,17 +197,17 @@ body {
     cursor: pointer;
 }
 
-/* Adicionada regra de mídia para telas menores */
+
 @media (max-width: 768px) {
     .card {
-        flex-direction: column; /* Empilha em telas menores */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
 
     .card img {
-        margin-right: 0; /* Remove a margem à direita em telas menores */
-        margin-bottom: 10px; /* Adiciona espaço abaixo da imagem */
+        margin-right: 0;
+        margin-bottom: 10px; 
     }
 }
 
@@ -309,7 +309,7 @@ body {
     height: 38px;
     background: rgb(201, 198, 198);
     border-radius: 50%;
-    text-align: center; /* Alinha o conteúdo no centro horizontalmente */
+    text-align: center; 
   }
   .close:hover {
     background: rgb(209, 207, 207);
@@ -318,7 +318,7 @@ body {
   .close span {
     position: relative;
     top: 15%;
-    transform: translateY(-50%); /* Centraliza verticalmente */
+    transform: translateY(-50%); 
   }
   .close span:hover {
     color: rgb(221, 66, 66);
