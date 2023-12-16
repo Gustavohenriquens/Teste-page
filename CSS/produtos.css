@@ -1,0 +1,1109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none ;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif ;
+}
+:root {
+    --bg-color:#091d2c;
+    --second-bg-color:#112e42;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+    --cor-roxo: rgb(211, 30, 248);
+    --cor-roxo_escuro: rgb(190, 46, 219);
+    --cor-rosa: rgb(255, 0, 217);
+    --cor-lilas: rgb(120, 0, 240);
+    --cor-verde: rgb(4, 188, 71);
+    --cor-lilas_escuro: rgb(87, 2, 172);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas menores */
+    align-items: center;
+}
+
+.product img {
+    max-width:100%;
+    height: auto; /* Adicionado margem inferior para espaçamento em telas menores */
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    margin-right: 20px; /* Adicionado margem direita para espaçamento em telas menores */
+}
+
+.card h2 {
+    color: #333;
+}
+
+.card p {
+    color: #777;
+}
+
+.card span {
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-direction: row; /* Empilha os itens verticalmente em telas menores */
+    }
+
+    .card {
+        margin-right: 0; /* Remove a margem direita em telas menores */
+        margin-bottom: 20px; /* Adicionado margem inferior para espaçamento em telas menores */
+    }
+}
+
+
+/*Cabeçalho*/
+
+.header {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;   
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+#menu-icon {
+    margin-top: 10px;
+    font-size:2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.cardapio {
+    margin: 20px auto; /* Alterei o margin para centralizar */
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cardapio h2 {
+    margin-bottom: 2rem; /* Reduzi a margem inferior */
+    font-size: 2.5rem; /* Reduzi o tamanho da fonte */
+}
+
+.cardapio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Reduzi o espaçamento entre os itens */
+}
+
+.cardapio-box {
+    position: relative;
+    border-radius: 1rem; /* Reduzi a borda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Mudei a direção para coluna */
+    align-items: center; /* Centralizei os itens */
+    max-width: 300px;
+    text-align: center;
+    margin: 10px; /* Reduzi a margem */
+}
+
+.cardapio-box .image-container {
+    width: 100%;
+}
+
+.cardapio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.cardapio-box .cardapio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--cor-rosa));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1.5rem; /* Reduzi o preenchimento */
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.cardapio-box:hover .cardapio-layer {
+    transform: translateY(0);
+}
+
+
+/*.cardapio {
+    margin: 50px;
+}
+
+.cardapio h2 {
+    margin-bottom: 4rem;
+    font-size: 3.5rem;
+}
+
+.cardapio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.cardapio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cardapio-box .image-container {
+    width: 100%;
+}
+
+.cardapio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+
+.cardapio-box .cardapio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--cor-rosa));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.cardapio-box:hover .cardapio-layer {
+    transform: translateY(0);
+}*/
+
+
+.comprar-button1{
+    font-size: 1.5rem;
+    background: var(--main-color);
+    color: #fff;
+    padding: 30px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 3px; 
+    width: 100%;
+    text-align: center;
+}
+
+.comprar-button1:hover {
+    background-color: var(--cor-roxo_escuro);
+}
+
+.comprar-button2{
+    font-size: 1.5rem;
+    background: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; 
+    width: 100%;
+    text-align: center;
+}
+
+.comprar-button2:hover {
+    background-color: var(--cor-roxo_escuro);
+}
+
+
+
+
+
+
+
+/* Estilo para o modal 1 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    margin: 100px auto 0; 
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal img {
+    padding: 0;
+}
+
+.btn_modal1 {
+    border-radius: 10px;
+    text-align: center;
+    background-color: black; 
+    font-size: 15px; 
+    color: white; 
+    padding: 8px; margin: 20px;
+}
+
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(2, 2, 2);
+    display: inline-block;
+    max-width: 100px;
+}
+
+.modal h2{
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.modal  p{
+    color: black;
+    font-size: 10px;
+}
+
+#check_modal1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+#check_modal1 label {
+    display: block;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 15px;
+}
+
+#check_modal1 input {
+    margin-right: 15px;
+}
+
+
+
+
+
+
+/* Estilo para o modal 2 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    margin: 100px auto 0; 
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal img {
+    padding: 0;
+}
+
+.btn_modal2 {
+    border-radius: 10px;
+    text-align: center;
+    background-color: black; 
+    font-size: 15px; 
+    color: white; 
+    padding: 8px; margin: 20px;
+}
+
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(2, 2, 2);
+    display: inline-block;
+    max-width: 100px;
+}
+
+.modal h2{
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.modal  p{
+    color: black;
+    font-size: 10px;
+}
+
+#check_modal2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+#check_modal2 label {
+    display: block;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 15px;
+}
+
+#check_modal2 input {
+    margin-right: 15px;
+}
+
+
+/* Estilo para o modal 3 */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    margin: 100px auto 0; 
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal img {
+    padding: 0;
+}
+
+.btn_modal3 {
+    border-radius: 10px;
+    text-align: center;
+    background-color: black; 
+    font-size: 15px; 
+    color: white; 
+    padding: 8px; margin: 20px;
+}
+
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(2, 2, 2);
+    display: inline-block;
+    max-width: 100px;
+}
+
+.modal h2{
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.modal  p{
+    color: black;
+    font-size: 10px;
+}
+
+#check_modal3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+#check_modal3 label {
+    display: block;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 15px;
+}
+
+#check_modal3 input {
+    margin-right: 15px;
+}
+
+
+/* Estilo para o modal 4 */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    margin: 100px auto 0; 
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal img {
+    padding: 0;
+}
+
+.btn_modal4 {
+    border-radius: 10px;
+    text-align: center;
+    background-color: black; 
+    font-size: 15px; 
+    color: white; 
+    padding: 8px; margin: 20px;
+}
+
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(2, 2, 2);
+    display: inline-block;
+    max-width: 100px;
+}
+
+.modal h2{
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.modal  p{
+    color: black;
+    font-size: 10px;
+}
+
+#check_modal4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+#check_modal4 label {
+    display: block;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 15px;
+}
+
+#check_modal4 input {
+    margin-right: 15px;
+}
+
+
+/* Estilo para o modal 5 */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    margin: 100px auto 0; 
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal img {
+    padding: 0;
+}
+
+.btn_modal5 {
+    border-radius: 10px;
+    text-align: center;
+    background-color: black; 
+    font-size: 15px; 
+    color: white; 
+    padding: 8px; margin: 20px;
+}
+
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(2, 2, 2);
+    display: inline-block;
+    max-width: 100px;
+}
+
+.modal h2{
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.modal  p{
+    color: black;
+    font-size: 10px;
+}
+
+#check_modal5 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+#check_modal5 label {
+    display: block;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 15px;
+}
+
+#check_modal5 input {
+    margin-right: 15px;
+}
+
+
+/* Estilo para o modal 6 */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    margin: 100px auto 0; 
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal img {
+    padding: 0;
+}
+
+.btn_modal6 {
+    border-radius: 10px;
+    text-align: center;
+    background-color: black; 
+    font-size: 15px; 
+    color: white; 
+    padding: 8px; margin: 20px;
+}
+
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(2, 2, 2);
+    display: inline-block;
+    max-width: 100px;
+}
+
+.modal h2{
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.modal  p{
+    color: black;
+    font-size: 10px;
+}
+
+#check_modal6 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+#check_modal6 label {
+    display: block;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 15px;
+}
+
+#check_modal6 input {
+    margin-right: 15px;
+}
+
+
+/* Estilo para o modal 7 */
+
+
+/* Estilo para o modal 8 */
+
+
+/* Estilo para o modal 0 */
+
+
+/* Estilo para o modal 10 */
+
+
+
+
+
+
+/*Reponsividade*/
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .modal-content{
+        padding: 20px ;
+    }
+}
+
+@media (max-width:991px) {
+    .header {
+        padding: 2rem 4% ;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .home {
+        padding: 0 4%;
+    }
+
+    .footer {
+        padding: 2rem 4%;
+    }
+
+    .cardapio {
+        padding-bottom: 7rem;
+    }
+
+    .modal-content{
+        padding: 100px;
+    }
+}
+
+
+
+@media (max-width:768px) {
+    .header {
+        background: var(--cor-rosa);
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0 , 0 , 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25s;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem 0;
+        margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0 , 0 , 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0;
+    }
+
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25s;
+    }
+
+    .navbar.active a {
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+
+    .home-imgHover {
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
+    }
+
+    .cardapio h2 {
+        margin-bottom: 3rem
+    }
+
+    .cardapio-container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .modal-content{
+        padding: 50px;
+    }
+};
+
+@media (max-width: 617px) {
+    .cardapio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content{
+        padding: 50px;
+        margin: 10px;
+    
+    }
+}
+
+
+
+@media (max-width: 520px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-sci {
+        width: 160px;
+    }
+
+    .home-sci a {
+       width: 44px;
+       height: 44px;
+    }
+
+    .modal-content{
+        padding: 0px;
+    }
+    .modal img {
+        padding: 0;
+    }
+
+    .modal h2, p , select  a{
+        margin: 15px;
+    }
+};
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+@media (max-width: 462px) {
+    .home-content h1 {
+        font-size: 5.2rem;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column-reverse
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center
+    }
+
+    .modal-content{
+        padding: 20px ;
+    }
+};
+
+@media (max-width: 371px) {
+    .home {
+        justify-content: center;
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal-content{
+        padding: 20px ;
+    }
+}
+
+
+@keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+
+
+@keyframes homeCursorText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg  );
+    }
+}

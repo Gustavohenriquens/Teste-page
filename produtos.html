@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/produtos.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <title>Document</title>
+</head>
+<body>
+
+
+    <header class="header">
+        <!--<img src="logo_acai.png" alt=""> -->
+        <a href="index.html" class="logo">Logo.</a>
+
+        <a href="#"><div id="menu-icon"><i class='bx bxs-cart'></i></div></a>
+    </header>   
+
+
+
+    <section class="cardapio" id="cardapio">
+        <h2 class="heading">Faça seu Pedido<span></span></h2>
+    
+
+
+        <!--Imagem e Modal 1-->
+
+        <div class="cardapio-container">
+            <div class="cardapio-box">
+                <div class="image-container">
+                    <img src="images/acai.png" alt="">
+                </div>
+                <a class="comprar-button1" data-modal="modal1">Comprar</a>
+                <div class="descricao-produto"></div>
+            </div>
+        </div>
+
+        
+        <div id="modal1" class="modal">
+            <div style="display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto;" column; class="modal-content">
+                <span class="close-button" data-modal="modal1"><i class='bx bxs-message-square-x'></i></span>
+
+                <img src="images/acai.png" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p> <b>A partir de R$ 22,00</b></p>
+
+                <div style="background: rgb(234, 226, 226); margin-bottom: 15px;">
+                <p> <b>Escolha Duas Opções de Topping:</b></p>
+                <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal1" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+                    <div>
+                    <h3 style="font-size: 18px; color: black; margin-bottom: 8px;">Algum comentário adicional?</h3>
+                    <textarea name="" id="" cols="60" rows="5" placeholder="Ex: Sem picles, alérgico a nozes, maionese a parte, etc."></textarea>
+                    </div>
+
+                <a class="btn_modal1" onclick="addToppings()" href="#">Adcionar</a>
+
+            </div>
+        </div>
+
+
+
+    
+        <!--Imagem e Modal 2-->
+    
+        <div class="cardapio-container">
+            <div class="cardapio-box">
+                <div class="image-container">
+                    <img src="images/acai.png" alt="">
+                </div>
+                <a class="comprar-button1" data-modal="modal2">Comprar</a>
+            </div>
+        </div> 
+
+
+
+    
+        
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-button" data-modal="modal2"><i class='bx bxs-message-square-x'></i></span>
+                <img src="images/acai.png" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p> <b>A partir de R$ 22,00</b></p>
+
+                <div style="background: rgb(234, 226, 226); margin-bottom: 15px;">
+                <p> <b>Escolha Duas Opções de Topping:</b></p>
+                <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal2" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+                    <div>
+                    <h3 style="font-size: 18px; color: black; margin-bottom: 8px;">Algum comentário adicional?</h3>
+                    <textarea name="" id="" cols="60" rows="5" placeholder="Ex: Sem picles, alérgico a nozes, maionese a parte, etc."></textarea>
+                    </div>
+
+                <a class="btn_modal1" href="#">Adcionar</a>
+
+            </div>
+        </div>
+    
+    
+
+
+
+        <!--Imagem e Modal 3-->
+
+        <div class="cardapio-container">
+            <div class="cardapio-box">
+                <div class "image-container">
+                    <img src="images/acai.png" alt="">
+                </div>
+                <a class="comprar-button1" data-modal="modal3">Comprar</a>
+            </div>
+        </div>  
+
+        
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close-button" data-modal="modal3"><i class='bx bxs-message-square-x'></i></span>
+                <img src="images/acai.png" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p> <b>A partir de R$ 22,00</b></p>
+
+                <div style="background: rgb(234, 226, 226); margin-bottom: 15px;">
+                <p> <b>Escolha Duas Opções de Topping:</b></p>
+                <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal3" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi"> Abacaxi
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+                    <div>
+                    <h3 style="font-size: 18px; color: black; margin-bottom: 8px;">Algum comentário adicional?</h3>
+                    <textarea name="" id="" cols="60" rows="5" placeholder="Ex: Sem picles, alérgico a nozes, maionese a parte, etc."></textarea>
+                    </div>
+
+                <a class="btn_modal1" href="#">Adcionar</a>
+
+            </div>
+        </div>
+
+
+
+
+    
+        <!--Imagem e Modal 4-->
+    
+         <div class="cardapio-container">
+            <div class="cardapio-box">
+                <div class "image-container">
+                    <img src="images/acai.png" alt="">
+                </div>
+                <a class="comprar-button1" data-modal="modal4">Comprar</a>
+            </div>
+        </div> 
+
+
+        
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close-button" data-modal="modal4"><i class='bx bxs-message-square-x'></i></span>
+                <img src="images/acai.png" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p> <b>A partir de R$ 22,00</b></p>
+
+                <div style="background: rgb(234, 226, 226); margin-bottom: 15px;">
+                <p> <b>Escolha Duas Opções de Topping:</b></p>
+                <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal4" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi"> Abacaxi
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+                    <div>
+                    <h3 style="font-size: 18px; color: black; margin-bottom: 8px;">Algum comentário adicional?</h3>
+                    <textarea name="" id="" cols="60" rows="5" placeholder="Ex: Sem picles, alérgico a nozes, maionese a parte, etc."></textarea>
+                    </div>
+
+                <a class="btn_modal1" href="#">Adcionar</a>
+
+            </div>
+        </div>
+    
+    
+
+
+        <!--Imagem e Modal 5-->
+    
+       <div class="cardapio-container">
+            <div class="cardapio-box">
+                <div class "image-container">
+                    <img src="images/acai.png" alt="">
+                </div>
+                <a class="comprar-button1" data-modal="modal5">Comprar</a>
+            </div> 
+        </div> 
+
+
+
+        
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close-button" data-modal="modal5"><i class='bx bxs-message-square-x'></i></span>
+                <img src="images/acai.png" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p> <b>A partir de R$ 22,00</b></p>
+
+                <div style="background: rgb(234, 226, 226); margin-bottom: 15px;">
+                <p> <b>Escolha Duas Opções de Topping:</b></p>
+                <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal5" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi"> Abacaxi
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+                    <div>
+                    <h3 style="font-size: 18px; color: black; margin-bottom: 8px;">Algum comentário adicional?</h3>
+                    <textarea name="" id="" cols="60" rows="5" placeholder="Ex: Sem picles, alérgico a nozes, maionese a parte, etc."></textarea>
+                    </div>
+
+                <a class="btn_modal1" href="#">Adcionar</a>
+
+            </div>
+        </div>
+
+
+
+    
+    
+        <!--Imagem e Modal 6-->
+
+        <div class="cardapio-container">
+            <div class="cardapio-box">
+                <div class "image-container">
+                    <img src="images/acai.png" alt="">
+                </div>
+                <a class="comprar-button1" data-modal="modal6">Comprar</a>
+            </div>
+        </div> 
+
+        
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close-button" data-modal="modal6"><i class='bx bxs-message-square-x'></i></span>
+                <img src="images/acai.png" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p> <b>A partir de R$ 22,00</b></p>
+
+                <div style="background: rgb(234, 226, 226); margin-bottom: 15px;">
+                <p> <b>Escolha Duas Opções de Topping:</b></p>
+                <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal6" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi"> Abacaxi
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+                    <div>
+                    <h3 style="font-size: 18px; color: black; margin-bottom: 8px;">Algum comentário adicional?</h3>
+                    <textarea name="" id="" cols="60" rows="5" placeholder="Ex: Sem picles, alérgico a nozes, maionese a parte, etc."></textarea>
+                    </div>
+
+                <a class="btn_modal1" href="#">Adcionar</a>
+
+            </div>
+        </div>
+
+
+
+        
+        </div>
+       </section>
+
+
+
+    <script src="JS/produtos.js"></script>
+</body>
+</html>
