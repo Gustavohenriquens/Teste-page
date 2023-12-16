@@ -13,7 +13,7 @@ function openModal(modalId) {
 }
 
 function closeModal(modalId) {
-  // Reinicialize todos os contadores para 0.
+ 
   for (let counterId in counters) {
     counters[counterId] = 0;
     document.getElementById(counterId).textContent = counters[counterId];
@@ -70,14 +70,14 @@ function confirmPurchase(modalId) {
     }
   });
 
-  // Obtenha informações dos contadores
+ 
   var salada = document.getElementById('counter1').textContent;
   var leiteEmPo1 = document.getElementById('counter3').textContent;
   var mel = document.getElementById('counter4').textContent;
   var granola = document.getElementById('counter5').textContent;
   var chocolate = document.getElementById('counter6').textContent;
 
-  // Crie a mensagem para o WhatsApp
+ 
   var mensagem = 'Pedido de Açaí:\nEmbalagem = ' + quantidade + ' Embalagem' +
     '\nAcompanhamentos : ' + toppingsSelecionados.join(', ').toUpperCase() +
     '\nAcompanhamentos 2 :' +
@@ -90,15 +90,15 @@ function confirmPurchase(modalId) {
     '\nRua: ' + rua +
     '\nNúmero da casa: ' + numeroCasa;
 
-  // Número de telefone para o qual você deseja enviar a mensagem (lembre-se de adicionar o código do país)
+  
   var numeroTelefone = '5581998396066';
 
-  // Crie o link para o WhatsApp
+ 
   var linkWhatsApp = 'https://api.whatsapp.com/send?phone=' + numeroTelefone + '&text=' + encodeURIComponent(mensagem);
 
-  // Abra o link em uma nova janela
+  
   window.open(linkWhatsApp, '_blank');
 
-  // Feche o modal após enviar o pedido (se necessário)
+ 
   closeModal(modalId);
 }
