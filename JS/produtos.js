@@ -79,5 +79,5 @@ function limitToppings() {
   }
 
   function addToppings() {
-    // Adicione sua lógica para adicionar os toppings aqui
+
   }
